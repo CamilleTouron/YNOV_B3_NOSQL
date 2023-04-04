@@ -12,11 +12,31 @@ db.pokemon.aggregate([
 ]).sort({"attack.power": -1})
 ```
 
-### resonse :
+### response :
 
 ![response 11](/responses/response_11.png)
 
-## 12. Lister la moyenne de point de défence des pokemon par type.
+## 12. Lister la moyenne de point de défence des pokemon par type eau feu et normal triée par moyenne décroissante.
+
+### request :
+
+```
+db.pokemon.aggregate([
+  {
+    $unwind: "$pokemon"
+  },
+  {
+    $group: {
+      _id: "$pokemon.type",
+      avgDefense: { $avg: "$pokemon.base.Defense" }
+    }
+  }
+]).sort({avgDefense: -1})
+```
+
+### response :
+
+![response 12](/responses/response_12.png)
 
 ## 13. Donner le nombre de pokemon ayant plus de deux types.
 
