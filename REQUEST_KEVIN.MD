@@ -10,7 +10,7 @@ db.pokemon.aggregate([
 ])
 ```
 
-(![Capture 16](/Captures/requete_16.png))
+![Capture 16](/Captures/requete_16.png)
 
 
 ## 17. Lister les noms des 10 attaques les moins utilisées (type le plus rare) par puissance d'attaque croissante.
@@ -24,7 +24,7 @@ db.pokemon.aggregate([
 ])
 ```
 
-(![Capture 17](/Captures/requete_17.png))
+![Capture 17](/Captures/requete_17.png)
 
 
 ## 18. Lister les pokemon aillant le même type triés par le type en ordre alphabétique croissant
@@ -45,7 +45,7 @@ db.pokemon.aggregate([
 ])
 ```
 
-(![Capture 19](/Captures/requete_19.png))
+![Capture 19](/Captures/requete_19.png)
 
 
 ## 19. Retourner les types de Pokémon ayant une attaque de base supérieure à 100, triés par la moyenne de leur attaque de base décroissante, avec le nombre de Pokémon de chaque type et la moyenne de leur attaque de base.
@@ -63,7 +63,7 @@ db.pokemon.aggregate([
 ])
 ```
 
-(![Capture 20](/Captures/requete_20.png))
+![Capture 20](/Captures/requete_20.png)
 
 
 ## 20. Lister les pokemon triés par nom anglais dans l'ordre alphabétique décroissant.
@@ -76,7 +76,7 @@ db.pokemon.aggregate([
 ]).toArray();
 ```
 
-(![Capture 18](/Captures/requete_18.png))
+![Capture 18](/Captures/requete_18.png)
 
 
 # Problèmes rencontrés
@@ -99,12 +99,12 @@ db.pokemon.aggregate([
 
 ### Cette requête retourne le résultat demandé
 
-(![Capture attack](/Captures/Capture_attack.png))
+![Capture attack](/Captures/Capture_attack.png)
 
 
 ### Cette requête ne retourne aucun résultat
 
-(![Capture Sp. attack](/Captures/Capture_sp_attack.png))
+![Capture Sp. attack](/Captures/Capture_sp_attack.png)
 
 
 ### Cette requête retourne 3 résultats
@@ -133,9 +133,29 @@ db.pokemon.find({
 
 ###  Requête 16
 
-(![Capture 16](/Captures/requete_16.png))
+![Capture 16](/Captures/requete_16.png)
 
 ###  Requête find équivalente à la requête 16 en aggregate
 
-(![Capture 16 find](/Captures/requete_16.png))
+![Capture 16 find](/Captures/requete_16.png)
 
+
+# Infos
+
+### Aggregate
+
+L'opération d'agrégation est une fonctionnalité qui permet de traiter et d'analyser les données en effectuant plusieurs étapes de traitement sur un ensemble de documents.
+
+### Opérateurs
+
+* **$unwind** est utilisé pour dérouler un tableau dans un document.
+
+* **$match** est utilisé pour filtrer les documents en fonction de certains critères. Comme un WHERE
+
+* **$project** est utilisé pour spécifier quels champs doivent être inclus ou exclus des résultats de la requête.
+
+* **$group** est utilisé pour regrouper les documents selon une ou plusieurs clés et calculer des opérations d'agrégation comme la somme, ou la moyenne.
+
+* **$sort** est utilisé pour trier les résultats d'une requête dans un ordre spécifié.
+
+* **$mod** est utilisée pour sélectionner des documents selon la valeur du reste de la division d'un champ par un nombre donné.
