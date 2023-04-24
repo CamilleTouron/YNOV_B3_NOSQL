@@ -1,10 +1,11 @@
 # Marco :
 
-- [] 1. Lister les attaques qui ont dans leur nom les 3 lettres les moins recurantes triées par ordre alphabétique.
-- [] 2. Lister les pokemon de type feu triée par vitesse croissante.
-- [] 3. Lister le nombre de pokemon volant groupée par type eau, feu et plante, triée par ordre croissant.
-- [] 4. Lister les noms des pokemon aillant les points de vie, d'attaque et de défense les plus haut.
-- [] 5. Lister les attaques du type du pokemon Feurisson (nom français).
+- [] 1. Lister les pokemon de type feu triée par vitesse croissante.
+- [] 2. Lister les noms des pokemon aillant les points de vie, d'attaque et de défense les plus haut.
+- [] 3. retrouver les  3 lettres les plus recurantes dans les nom de pokemon (script python).
+- [] 4. Crée une collection et ajouter les données en python
+- [] 5. Lister les pokemon et les attaque de type feu (sur deux collection differentes). (moves.json, pokedex.json)
+
 
 # Etienne :
 
