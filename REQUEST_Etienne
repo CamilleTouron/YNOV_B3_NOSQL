@@ -1,5 +1,44 @@
 [] 1. Lister les id des pokemon qui ont le même nom en anglais et en français.
 [] 2. Lister les attaques qui suffiraient à elle seule à abattre Bulbizarre (nom français).
+
+        db.pokemon.aggregate([
+  {
+    $unwind: "$pokemon"
+  },
+  {
+    $unwind: "$attack"
+  },
+  {
+    $addFields: {
+      target: {
+        $cond: {
+          if: { $eq: ["$pokemon.id", 1] },
+          then: "$pokemon.base.HP",
+          else: null
+        }
+      },
+
+    }
+  },
+  {
+    $match: {
+      $expr: {
+        $and: [
+          { $ne: ["$target", null] },
+          { $lt: ["$target","$attack.power"] }
+        ]
+      }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      Attaque: "$attack.ename"
+      Attaque id: "$attack.id"
+    }
+  }
+])
+
 [] 3. Lister les types de pokemon les plus récurrents dans l'ordre décroissant.
 [] 4. Lister les noms d'attaque dont le nom contient plus de un mot dans l'odre alphabétique.
 [*] 5. Lister les attaques qui ont une probabilité de 100 et une puissance supérieur à 100.
