@@ -72,7 +72,7 @@
     },
     {
         $sort: {
-            "pokemon.attack.ename": 1
+            "attack.ename": 1
         }
     },
     {
