@@ -25,8 +25,8 @@
 
 # Kévin :
 
-- [] 16. Lister les pokemon aillant une rapidité de defense impaire.
-- [] 17. Lister les attaques (par type et puissance d'attaque) que pourrait avoir chaque pokemon par ordre alphabétique croissant.
-- [] 18. Lister les pokemon aillant le même type triés par le type alphabétquement croissant.
-- [] 19. Lister les noms des 10 attaques les moins utilisées (type le plus rare) par puissance d'attaque croissante.
+- [] 16. Lister les pokemon aillant une vitesse impaire.
+- [] 17. Lister les noms des 10 attaques les moins utilisées (type le plus rare) par puissance d'attaque croissante.
+- [] 18. Lister les pokemon aillant le même type triés par le type en ordre alphabétique croissant.
+- [] 19. Retourner les types de Pokémon ayant une attaque de base supérieure à 100, triés par la moyenne de leur attaque de base décroissante, avec le nombre de Pokémon de chaque type et la moyenne de leur attaque de base.
 - [] 20. Lister les pokemon triée par nom anglais dans l'ordre alphabétique décroissant.
