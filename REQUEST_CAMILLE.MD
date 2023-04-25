@@ -2,7 +2,7 @@
 
 ## 11. Lister les types d'attaques aillant une probabilité différente de nulle triée par puissance d'attaque décroissante.
 
-### request :
+### requete :
 
 ```
 db.pokemon.aggregate([
@@ -12,13 +12,13 @@ db.pokemon.aggregate([
 ]).sort({"attack.power": -1})
 ```
 
-### response :
+### reponse :
 
-![response 11](/responses/response_11.png)
+![response 11](/reponses/response_11.png)
 
 ## 12. Lister la moyenne de point de défence des pokemon par type eau feu et normal triée par moyenne décroissante.
 
-### request :
+### requete :
 
 ```
 db.pokemon.aggregate([
@@ -34,13 +34,13 @@ db.pokemon.aggregate([
 ]).sort({avgDefense: -1})
 ```
 
-### response :
+### reponse :
 
-![response 12](/responses/response_12.png)
+![response 12](/reponses/response_12.png)
 
 ## 13. Donner le nombre de pokemon ayant plus de deux types.
 
-### request :
+### requete :
 
 ```
 db.pokemon.aggregate([
@@ -65,13 +65,13 @@ db.pokemon.aggregate([
 ])
 ```
 
-### response :
+### reponse :
 
-![response 13](/responses/response_13.png)
+![response 13](/reponses/response_13.png)
 
 ## 14. Lister les attaques aillant une puissance d'attaque multible de 10.
 
-### request :
+### requete :
 
 ```
 db.pokemon.aggregate([
@@ -86,13 +86,13 @@ db.pokemon.aggregate([
 ])
 ```
 
-### response :
+### reponse :
 
-![response 14](/responses/response_14.png)
+![response 14](/reponses/response_14.png)
 
 ## 15. Lister les pokemon qui seraient abbatus par l'attaque "Steam Eruption" de type eau (exclure les type feu).
 
-### request :
+### requete :
 
 ```
 db.pokemon.aggregate([
@@ -136,6 +136,6 @@ db.pokemon.aggregate([
 ])
 ```
 
-### response :
+### reponse :
 
-![response 15](/responses/response_15.png)
+![response 15](/reponses/response_15.png)
