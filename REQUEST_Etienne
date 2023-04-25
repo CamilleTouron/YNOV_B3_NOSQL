@@ -1,4 +1,10 @@
 [] 1. Lister les id des pokemon qui ont le même nom en anglais et en français.
+    db.pokemon.aggregate([
+    { $unwind: "$pokemon" },
+    { $match: { $expr: { $eq: [ "$pokemon.name.english", "$pokemon.name.french" ] } } },
+    { $project: { _id: 0, pokemon: 1 } }
+])
+
 [] 2. Lister les attaques qui suffiraient à elle seule à abattre Bulbizarre (nom français).
 
         db.pokemon.aggregate([
